@@ -17,12 +17,13 @@ pub fn println(args: impl Display) {
     println!("{args}")
 }
 
-pub trait Print: Display + Sized {
-    fn print(self) { print!("{self}") }
-    fn println(self) { println!("{self}") }
-    fn eprint(self) { eprint!("{self}") }
-    fn eprintln(self) { eprintln!("{self}") }
+pub trait Print: Display {
+    fn print(&self) { print!("{self}") }
+    fn println(&self) { println!("{self}") }
+    fn eprint(&self) { eprint!("{self}") }
+    fn eprintln(&self) { eprintln!("{self}") }
 }
+impl<T: Display> Print for T {}
 
 #[inline(always)]
 pub fn panic(args: impl Display) {
