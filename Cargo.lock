@@ -59,16 +59,16 @@ dependencies = [
 
 [[package]]
 name = "strf"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "strf-macros",
 ]
 
 [[package]]
 name = "strf-macros"
-version = "0.1.1"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "94b996f14d81b35c7a135cb132b7549aec0c8842cb45b2cf5de4e5968a90f5ac"
+checksum = "12ae2b65537ec0e3c4b271a9fdef1c915adefd9ad2899cf35f8ce0e86faed520"
 dependencies = [
  "proc-macro-crate",
  "proc-macro2",

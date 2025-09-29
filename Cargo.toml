@@ -1,10 +1,10 @@
 [package]
 name = "strf"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 repository = "https://github.com/Quelfth/strf"
 license = "MIT OR Apache-2.0"
 description = "Format strings with arbitrary expressions using highlighting friendly syntax"
 
 [dependencies]
-strf-macros = "0.1.1"
+strf-macros = "0.2.0"

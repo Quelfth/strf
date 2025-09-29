@@ -1,6 +1,4 @@
-
 use std::fmt::Display;
-
 pub use strf_macros::f;
 
 pub fn eprint(args: impl Display) {
@@ -17,6 +15,13 @@ pub fn print(args: impl Display) {
 
 pub fn println(args: impl Display) {
     println!("{args}")
+}
+
+pub trait Print: Display + Sized {
+    fn print(self) { print!("{self}") }
+    fn println(self) { println!("{self}") }
+    fn eprint(self) { eprint!("{self}") }
+    fn eprintln(self) { eprintln!("{self}") }
 }
 
 #[inline(always)]
